@@ -1,0 +1,56 @@
+.styled_table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: var(--font-size-texto);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  width: 50vw;
+  display: block;
+  overflow: auto;
+
+  & thead tr {
+    position: sticky;
+    top: 0;
+    background-color: blueviolet;
+    color: #ffffff;
+    text-align: left;
+
+    position: sticky;
+    top: 0;
+  }
+
+  & th,
+  td {
+    padding: 12px 15px;
+    width: 100vw;
+  }
+
+  & tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+
+  & tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+
+  & tbody tr:last-of-type {
+    border-bottom: 2px solid blueviolet;
+  }
+
+  & &__active_row {
+    font-weight: 500;
+    color: blueviolet;
+  }
+
+  &__icon::before{
+    display: block;
+    content: url("../../assets/img/detail.svg");
+    height: 1.4rem;
+    width: 1.4rem;
+    
+  }
+
+  &__botao{
+    width: min-content;
+    margin: 0 auto;
+  }
+}

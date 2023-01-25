@@ -1,0 +1,30 @@
+@import url('./styles/reset.css'); 
+@import url('./styles/font.css');
+@import url('./styles/_variaveis.css');
+
+
+body{
+    background-color: rgb(205 214 215);
+}
+
+button:hover {
+  filter: brightness(0.9);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 10px;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background:  rgba(174, 121, 224, 0.994);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: blueviolet;
+  }

@@ -1,0 +1,24 @@
+.headerModal{
+    word-break: break-word;
+}
+
+.bodyModal{
+    word-break: break-word;
+    & p {
+        font-size: var(--font-size-destaque);
+        padding: .3rem;
+    }
+
+    & label {
+        font-size: var(--font-size-subtitulo);
+        font-weight: 500;
+    }
+}
+
+.botaoLink{
+    width: 100%;
+    & a {
+        display: block;
+        height: 100%;
+    }
+}

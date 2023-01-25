@@ -1,0 +1,27 @@
+.botaoDefault {
+    padding: 1rem 1.5rem;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: var(--font-size-texto);
+    font-weight: 500;
+    cursor: pointer;
+    transition: filter 0.2;
+    width: 100%;
+
+    &__hidde {
+      display: none;
+    }
+
+    &__default{
+      background: blueviolet;
+    }
+
+    &__danger{
+      background: rgb(199, 65, 65);
+    }
+
+    &__success{
+      background: #28a745;
+    }
+
+  }

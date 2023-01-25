@@ -1,0 +1,25 @@
+:root {
+    --font-size-titulo: 3rem;
+    --font-size-subtitulo: 1.5rem;
+    --font-size-texto: 1.2rem;
+    --font-size-destaque: .98rem;   
+    --todo-cabecalho: #35A1F4;
+    --todo-conteudo: #F1FAFF;
+    --doing-cabecalho: #FFB001;
+    --doing-conteudo: #FFFCEA;
+    --done-cabecalho: #541FC4;
+    --done-conteudo: #F1F2FF;
+    --approved-cabecalho: #43C466;
+    --approved-conteudo: #EFFCEF;
+
+    --prioridade-alta-cabecalho: red;
+    --prioridade-alta-conteudo: rgba(245, 133, 133, 0.274);
+
+    --prioridade-media-cabecalho: yellow;
+    --prioridade-media-conteudo: rgba(255, 255, 164, 0.274);
+
+    --prioridade-baixa-cabecalho: blueviolet;
+    --prioridade-baixa-conteudo: white;
+
+  }
+

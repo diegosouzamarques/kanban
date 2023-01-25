@@ -1,0 +1,50 @@
+.card {
+  border-left: 5px solid;
+  border-radius: 5px;
+  margin: 0.3rem;
+  padding: 0 0.3rem;
+  cursor: pointer;
+
+  &__descritivo {
+    font-size: var(--font-size-destaque);
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    padding: 0 0.3rem;
+    word-break: break-word;
+  }
+
+  &__prioridade_alta_cabecalho {
+    border-color: var(--prioridade-alta-cabecalho);
+  }
+
+  &__prioridade_alta_conteudo {
+    background-color: var(--prioridade-alta-conteudo);
+  }
+
+  &__prioridade_media_cabecalho {
+    border-color: var(--prioridade-media-cabecalho);
+  }
+
+  &__prioridade_media_conteudo {
+    background-color: var(--prioridade-media-conteudo);
+  }
+
+  &__prioridade_baixa_cabecalho {
+    border-color: var(--prioridade-baixa-cabecalho);
+  }
+
+  &__prioridade_baixa_conteudo {
+    background-color: var(--prioridade-baixa-conteudo);
+  }
+
+  &__titulo{
+    word-break: break-word;
+    font-size: var(--font-size-destaque);
+    font-weight: 700;
+  }
+}

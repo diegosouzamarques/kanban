@@ -1,0 +1,82 @@
+.container_input{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    &__label {
+        margin: .3rem 0;
+        padding: .3rem;
+        font-size: var(--font-size-texto);
+        font-weight: 500;
+    }
+    
+    &__input {
+        
+        padding: 24px;
+        background: #e6e6e6;
+        border-radius: 5px;
+        border: none;
+        font-size: var(--font-size-texto);
+        font-weight: 500;
+        margin: 0.3rem 0;
+
+        &:focus {
+            outline: none !important;
+            border: solid;
+            border: 3px solid blueviolet;
+          }
+
+    }
+
+    &__erro_validacao {
+        margin-top: 3px;
+        color: #f73859;
+        font-size: var(--font-size-texto);
+        font-weight: 500;
+      }
+
+    &__possui_erro_validacao {
+        border: solid;
+        border-color: #f73859;
+        &:focus {
+            outline: none !important;
+            border: solid;
+            border: 3px solid #f73859;
+          }
+        
+      }   
+      
+    &__error__visible{
+        display: none;
+    }  
+
+    &__file_btn {
+        background-color: #3498db;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        margin: 10px;
+        padding: 6px 20px
+      }
+    
+}
+
+[data-iconfile]::after { 
+    display: block;
+    content: url('../../../assets/img/upload.svg');
+    height: 1.3rem;
+    width: 1.3rem;
+}
+
+[data-lblfile] { 
+    display: flex;
+    justify-content: space-between;
+}
+
+[data-lblfile]:hover { 
+    cursor: pointer;
+}
+
+input[type=file] {
+    display: none
+  }
