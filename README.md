@@ -17,6 +17,7 @@ nas duas visões podendo editar e visualizar detalhes.
 No cadastro de card contém as informações básicas para cadastro,
 contendo campos obrigatórios com validação e monstrando ao usuário
 a necessidade do preenchimento.   
+
 ![](/gifs/validacao.gif)
 
 
@@ -26,9 +27,21 @@ no Dashboard apenas clicando sobre o card temos uma tela modal com as
 informações e botão para atualizar. Já na tela de histórico existe um botão
 que exibe a mesma modal possibilidando o acesso a alteração.
 
+![](/gifs/atualizacao.gif)
+
 ### Deleção Card
 No histórico é possivel realizar esta ação clicando no botão correspondente
 e confirmar a deleção.
+
+![](/gifs/delete.gif)
+
+
+### Avanço de Status Card
+Na tela de Dashboard é possível realizar a Transferência de status
+do card apenas arrastando.
+
+![](/gifs/arrastar.gif)
+
 
 ## Deploy
 Acesso ao deploy clicando [aqui](https://kanban-diegosouzamarques.vercel.app/)
