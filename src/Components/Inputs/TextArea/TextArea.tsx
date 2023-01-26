@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./TextArea.module.scss";
 import classNames from "classnames";
 
@@ -16,6 +16,10 @@ interface ITextArea {
 const TextArea = ({ ...props }: ITextArea) => {
   const [valido, setValido] = useState(true);
   const [caracteres, setCaracteres] = useState(0);
+
+  useEffect(()=>{
+    setCaracteres(props.valor.length);
+  },[props.valor]);
 
   const aoDigitado = (evento: React.ChangeEvent<HTMLTextAreaElement>) => {
     props.aoAlterado(evento.target.value);
@@ -55,9 +59,12 @@ const TextArea = ({ ...props }: ITextArea) => {
         onInput={onInput}
         onBlur={onBlur}
       ></textarea>
-      <span className={classNames({
-          [styles.container_area__contador__visible]: (props.maxCaracter||0) <= 0
-        })}>{`${caracteres} de ${props.maxCaracter} caracteres`}</span>
+      <span
+        className={classNames({
+          [styles.container_area__contador__visible]:
+            (props.maxCaracter || 0) <= 0,
+        })}
+      >{`${caracteres} de ${props.maxCaracter} caracteres`}</span>
       <span
         className={classNames({
           [styles.container_area__error__visible]: valido,

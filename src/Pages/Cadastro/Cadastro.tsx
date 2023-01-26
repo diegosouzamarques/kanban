@@ -12,16 +12,21 @@ import { useEffect } from "react";
 import useAtualizarWf from "../../State/hooks/useAtualizarWF";
 import { IWorkFlow } from "../../Interface/IWorkFlow";
 import { FaseStep } from "../../Enum/FaseStep";
+import MessageErrorModal from "../../Components/Modal/MessageError/MessageErrorModal";
+import { useModal } from "../../Components/Modal/Modal";
+
 
 const Cadastro = () => {
   const adicionarWF = useAdicionarWF();
   const atualizarWF = useAtualizarWf();
+  const { isShowing, toggle } = useModal();
 
   const [titulo, setTitulo] = useState("");
   const [descricao, setDescricao] = useState("");
   const [dtentrega, setDtentrega] = useState("");
   const [arquivo, setArquivo] = useState("");
   const [show, setShow] = useState(false);
+  const [message, setMessage] = useState("");
 
   const { id } = useParams();
   const listaWF = useListaWF();
@@ -35,12 +40,12 @@ const Cadastro = () => {
   };
 
   const formataStringData = (data: string) => {
-      let dataString = data.split("-");
-      let year = dataString[0];
-      let month = dataString[1];
-      let day = dataString[2];
-      let m = Number(month) === 0 ? Number(month) : Number(month)-1;
-      return new Date(Number(year), m, Number(day)); 
+    let dataString = data.split("-");
+    let year = dataString[0];
+    let month = dataString[1];
+    let day = dataString[2];
+    let m = Number(month) === 0 ? Number(month) : Number(month) - 1;
+    return new Date(Number(year), m, Number(day));
   };
 
   useEffect(() => {
@@ -50,11 +55,11 @@ const Cadastro = () => {
       setDtentrega(formataDataString(wf.dataEntrega));
       setArquivo(wf.arquivo);
     }
-  }, []);
+    if (message.length > 0) !isShowing && toggle();
+  }, [message]);
 
   const submeterForm = () => {
     try {
-      
       const workflow: IWorkFlow = {
         id: wf?.id || undefined,
         titulo,
@@ -77,7 +82,8 @@ const Cadastro = () => {
       setDtentrega("");
       setArquivo("");
     } catch (error) {
-      alert(error);
+      let e = error  as Error;
+      setMessage(e.message);
     }
   };
 
@@ -104,7 +110,7 @@ const Cadastro = () => {
         required
         msgError="Por favor descreva o workflow."
         maxCaracter={750}
-      /> 
+      />
 
       <InputPadrao
         id="dtentrega"
@@ -116,13 +122,13 @@ const Cadastro = () => {
         msgError="Por favor escolha uma data futura."
       />
 
-       <InputPadrao
+      <InputPadrao
         id="arquivo"
         tipo="file"
         titulo="Anexo"
         valor={arquivo}
         aoAlterado={(valor) => setArquivo(valor)}
-      /> 
+      />
       <div className={style.btn_salvar}>
         <BotaoDefault type="submit" nipple="success">
           Salvar
@@ -130,6 +136,11 @@ const Cadastro = () => {
       </div>
 
       <ShowSucessoCadastro show={show} setShow={setShow} />
+      <MessageErrorModal
+        isShowing={isShowing}
+        toggle={toggle}
+        message={message}
+      />
     </FormPadrao>
   );
 };

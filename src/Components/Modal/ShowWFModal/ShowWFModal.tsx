@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { abrirProp } from "../../../Interface/abrirProp";
+import { abrirProp } from "../../../Interface/IAbrirProp";
 import BotaoDefault from "../../Botao/BotaoDefault/BotaoDefault";
 import Modal, { ModalBody, ModalFooter, ModalHeader } from "../Modal";
 import styles from "./ShowWFModal.module.scss";
