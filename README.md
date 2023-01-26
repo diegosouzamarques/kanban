@@ -17,7 +17,7 @@ nas duas visões podendo editar e visualizar detalhes.
 No cadastro de card contém as informações básicas para cadastro,
 contendo campos obrigatórios com validação e monstrando ao usuário
 a necessidade do preenchimento.   
-![](/gifs/atualizacao.gif)
+![](/gifs/validacao.gif.gif)
 
 
 ### Alteração Card
