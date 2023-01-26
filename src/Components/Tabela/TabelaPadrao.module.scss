@@ -41,9 +41,17 @@
     color: blueviolet;
   }
 
-  &__icon::before{
+  &__icon_details::before{
     display: block;
     content: url("../../assets/img/detail.svg");
+    height: 1.4rem;
+    width: 1.4rem;
+    
+  }
+
+  &__icon_delete::before{
+    display: block;
+    content: url("../../assets/img/lixeira2.svg");
     height: 1.4rem;
     width: 1.4rem;
     

@@ -1,14 +1,8 @@
 import { Link } from "react-router-dom";
-import { IWorkFlow } from "../../../Interface/IWorkFlow";
+import { abrirProp } from "../../../Interface/abrirProp";
 import BotaoDefault from "../../Botao/BotaoDefault/BotaoDefault";
 import Modal, { ModalBody, ModalFooter, ModalHeader } from "../Modal";
 import styles from "./ShowWFModal.module.scss";
-
-interface abrirProp {
-  isShowing: boolean;
-  toggle: () => void;
-  workFlow: IWorkFlow;
-}
 
 const ShowWFModal = ({ isShowing, toggle, workFlow }: abrirProp) => {
   return (
