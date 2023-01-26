@@ -60,6 +60,7 @@ const InputPadrao = ({ ...props }: IInputPadrao) => {
           onInvalid={onInvalid}
           onInput={onInput}
           onBlur={onBlur}
+          autoComplete="off"
         />
       )}
 
@@ -86,6 +87,7 @@ const InputPadrao = ({ ...props }: IInputPadrao) => {
               onInvalid={onInvalid}
               onInput={onInput}
               onBlur={onBlur}
+              autoComplete="off"
             />
           </label>
 

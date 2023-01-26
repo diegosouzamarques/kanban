@@ -58,6 +58,7 @@ const TextArea = ({ ...props }: ITextArea) => {
         onInvalid={onInvalid}
         onInput={onInput}
         onBlur={onBlur}
+        autoComplete="off"
       ></textarea>
       <span
         className={classNames({
