@@ -32,3 +32,16 @@
   position: fixed;
 }
 
+
+@media screen and (max-width:1023px) {
+   .outlet {
+    margin-top: 158px;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .container{
+    position: static;
+  } 
+  
+}

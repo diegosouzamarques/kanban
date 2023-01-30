@@ -39,9 +39,11 @@ const Step = ({ step }: IStep) => {
       >
         {step}
       </h2>
-      {listaWF.map((item, index) => (
-        <Card key={index} workFlow={item} />
-      ))}
+      <div className={styles.step__cards}>
+        {listaWF.map((item, index) => (
+          <Card key={index} workFlow={item} />
+        ))}
+      </div>
     </div>
   );
 };

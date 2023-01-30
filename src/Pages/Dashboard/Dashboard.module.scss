@@ -5,4 +5,15 @@
   height: 100vh;
   flex-wrap: wrap;
   margin: 1rem;
+
+  @media screen and (max-width: 1023px) {
+     &{
+      margin: 0.3rem;
+      height: inherit;
+      justify-content: start;
+      flex-direction: column;
+      flex-wrap: nowrap;
+    } 
+    
+  }
 }
