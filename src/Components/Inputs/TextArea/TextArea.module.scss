@@ -50,4 +50,10 @@
   &__contador__visible {
     display: none;
   }
+
+  
+  @media screen and (max-width:1023px) {
+    width: 90%;
+  }
+  
 }

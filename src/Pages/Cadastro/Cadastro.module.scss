@@ -2,3 +2,11 @@
   margin: .3rem  0;
   width: 60%;
 }
+
+
+@media screen and (max-width:1023px) {
+  .btn_salvar {
+    width: 90%;
+  }
+  
+}

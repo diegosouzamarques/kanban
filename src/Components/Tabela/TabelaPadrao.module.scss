@@ -20,7 +20,31 @@
 
   & th,
   td {
-    padding: 12px 15px;
+    padding: 0.3rem 0.3rem;
+    vertical-align: middle;
+  }
+
+
+  &__title{
+    width: 40%;
+  }
+
+  &__descritivo {
+    font-size: var(--font-size-destaque);
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    padding: 0 0.3rem;
+    word-break: break-word;
+  }
+
+  &__td_span{
+    padding: 0 !important;
+    vertical-align: middle;
     width: 100vw;
   }
 
@@ -28,9 +52,11 @@
     border-bottom: 1px solid #dddddd;
   }
 
-  & tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
-  }
+  & tbody tr:nth-child(4n),
+  & tbody tr:nth-child(4n-1) {
+  background-color: #f3f3f3;
+} 
+
 
   & tbody tr:last-of-type {
     border-bottom: 2px solid blueviolet;
@@ -57,8 +83,54 @@
     
   }
 
+  &__icon_threedot::before{
+    display: block;
+    content: url("../../assets/img/vertical_dots.svg");
+    height: 1.4rem;
+    width: .4rem;
+    cursor: pointer;
+  }
+
   &__botao{
     width: min-content;
     margin: 0 auto;
   }
+
+  &__desktop{
+    display: table-cell;
+  }
+
+  &__mobile{
+    display: none;
+  }
+
+  &__tooltip_not_visible{
+    display: none;
+  }
+  &__tooltip_visible{
+    display: flex;
+  }
+
+  &__tooltip{
+    position: static;
+    justify-content: space-evenly;
+    scale: 0.8;
+  }
+
+  @media screen and (max-width: 1023px) {
+
+    &{
+      width: 100vw;
+      font-size: var(--font-size-destaque);
+    }
+
+    &__desktop{
+      display: none;
+    }
+  
+    &__mobile{
+      display: table-cell;
+    }
+
+}
 }

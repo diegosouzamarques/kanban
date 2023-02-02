@@ -9,6 +9,8 @@ import {
 import styles from "./PaginaPadrao.module.scss";
 import Menu from "../../Components/Menu/Menu";
 import BotaoDefault from "../../Components/Botao/BotaoDefault/BotaoDefault";
+import classNames from "classnames";
+
 
 const PaginaPadrao = () => {
   const navigate = useNavigate();
@@ -40,11 +42,16 @@ const PaginaPadrao = () => {
      <div className={styles.container}>    
       <header className={styles.header}>
         <Menu hidde={menuHamburgerHide}/>
-        <div className={styles.header__btn_voltar}>
+        <div className={classNames(styles.header__btn_voltar, styles.header__btn_desktop)}>
           <BotaoDefault type="button" children={"< Voltar"} hidde={!menuHamburgerHide} onClick={() => {
               navigate(-1);
             }}/>
         </div>   
+        <div className={classNames(styles.header__btn_voltar, styles.header__btn_mobile)}>
+          <BotaoDefault type="button" children={"<"} hidde={!menuHamburgerHide} onClick={() => {
+              navigate(-1);
+            }}/>
+        </div>         
 
 
         <h1 className={styles.header__titulo}>Kanban - {retornaTitulo(id)}</h1>

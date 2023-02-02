@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   padding: 0 1rem;
-  position: fixed;
+  position: sticky;
   top: 0;
   z-index: 999;
   width: 100vw;
@@ -20,11 +20,19 @@
     position: absolute;
   }
 
+  &__btn_mobile{
+    display: none;
+  }
+  
+  &__btn_desktop{
+    display: block;
+  }
+
 }
 
 .outlet {
-  margin-top: 98px;
   width: 100vw;
+  min-height: 80vh;
 }
 
 .container{
@@ -34,14 +42,26 @@
 
 
 @media screen and (max-width:1023px) {
-   .outlet {
-    margin-top: 158px;
-    width: 100vw;
-    height: 100vh;
-  }
-  
   .container{
     position: static;
   } 
+
+  .header{
+    padding: 0;
+    margin: 0 0.3rem;
+  }
+
+  .header__btn_voltar {
+    top: 0;
+  }
+
+  .header__btn_mobile{
+    display: block;
+    margin: 0.3rem;
+  }
   
+  .header__btn_desktop{
+    display: none;
+  }
+
 }

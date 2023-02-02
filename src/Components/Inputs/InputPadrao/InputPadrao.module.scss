@@ -58,6 +58,10 @@
         margin: 10px;
         padding: 6px 20px
       }
+
+      @media screen and (max-width:1023px) {
+        width: 90%;
+      }
     
 }
 
@@ -80,3 +84,7 @@
 input[type=file] {
     display: none
   }
+
+input[type="date" i] {
+    width: initial;
+}
