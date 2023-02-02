@@ -49,23 +49,26 @@
     font-weight: 700;
   }
 
-  @media screen and (min-width:1441px){
+   @media screen and (max-width:1023px) and (min-width:500px) {
     &{
-      max-width: 18rem;
+      flex-basis: calc(50% - 25px);
     }
 
   } 
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width:2560px) and (min-width:1900px){
     &{
-      max-width: 18rem;
-   } 
- }
+      flex-basis: calc(50% - 25px);
+    }
 
-  @media screen and (max-width: 1023px) {
+  } 
+
+
+
+  @media screen and (max-width: 499px) {
      &{
       width: 100vw;
     } 
-  }
+  } 
 
 }
