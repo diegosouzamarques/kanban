@@ -3,6 +3,7 @@
   border-radius: 5px;
   margin: 0.3rem;
   padding: 0 0.3rem;
+  height: fit-content;
   cursor: pointer;
 
   &__descritivo {
@@ -55,10 +56,15 @@
 
   } 
 
+  @media screen and (max-width: 768px) {
+    &{
+      max-width: 18rem;
+   } 
+ }
+
   @media screen and (max-width: 1023px) {
      &{
       width: 100vw;
-      height: fit-content;
     } 
   }
 
