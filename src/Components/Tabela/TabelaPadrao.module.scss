@@ -24,8 +24,7 @@
     vertical-align: middle;
   }
 
-
-  &__title{
+  &__title {
     width: 40%;
   }
 
@@ -42,21 +41,16 @@
     word-break: break-word;
   }
 
-  &__td_span{
+  &__td_span {
     padding: 0 !important;
     vertical-align: middle;
     width: 100vw;
   }
 
-  & tbody tr {
-    border-bottom: 1px solid #dddddd;
-  }
-
   & tbody tr:nth-child(4n),
   & tbody tr:nth-child(4n-1) {
-  background-color: #f3f3f3;
-} 
-
+    background-color: #f3f3f3;
+  }
 
   & tbody tr:last-of-type {
     border-bottom: 2px solid blueviolet;
@@ -67,70 +61,66 @@
     color: blueviolet;
   }
 
-  &__icon_details::before{
+  &__icon_details::before {
     display: block;
     content: url("../../assets/img/detail.svg");
     height: 1.4rem;
     width: 1.4rem;
-    
   }
 
-  &__icon_delete::before{
+  &__icon_delete::before {
     display: block;
     content: url("../../assets/img/lixeira2.svg");
     height: 1.4rem;
     width: 1.4rem;
-    
   }
 
-  &__icon_threedot::before{
+  &__icon_threedot::before {
     display: block;
     content: url("../../assets/img/vertical_dots.svg");
     height: 1.4rem;
-    width: .4rem;
+    width: 0.4rem;
     cursor: pointer;
   }
 
-  &__botao{
+  &__botao {
     width: min-content;
     margin: 0 auto;
   }
 
-  &__desktop{
+  &__desktop {
     display: table-cell;
   }
 
-  &__mobile{
+  &__mobile {
     display: none;
   }
 
-  &__tooltip_not_visible{
+  &__tooltip_not_visible {
     display: none;
   }
-  &__tooltip_visible{
+  &__tooltip_visible {
     display: flex;
   }
 
-  &__tooltip{
+  &__tooltip {
     position: static;
     justify-content: space-evenly;
     scale: 0.8;
   }
 
   @media screen and (max-width: 1023px) {
-
-    &{
+    & {
       width: 100vw;
       font-size: var(--font-size-destaque);
     }
 
-    &__desktop{
+    &__desktop {
       display: none;
     }
-  
-    &__mobile{
+
+    &__mobile {
       display: table-cell;
     }
-
-}
+  }
 }
