@@ -3,13 +3,23 @@ import BotaoDefault from "../../Components/Botao/BotaoDefault/BotaoDefault";
 import style from "./NotFound.module.scss";
 const NotFound = () => {
   const navigate = useNavigate();
+  const url =
+    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/91525/potofgold.svg";
   return (
-    <div>
-      <div className={style.svgContent}>
-        <BotaoDefault type="button" children={"< Voltar"} onClick={() => {
+    <div className={style.conteiner}>
+      
+
+     <div className={style.conteiner__btn}>
+        <BotaoDefault
+          type="button"
+          children={"< Voltar"}
+          onClick={() => {
             navigate(-1);
-          }} />
+          }}
+        />
       </div>
+
+
     </div>
   );
 };
